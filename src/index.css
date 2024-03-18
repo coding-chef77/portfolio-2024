@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Merriweather:wght@700&display=swap");
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f40;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
