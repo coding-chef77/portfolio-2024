@@ -9,9 +9,9 @@ const CvProfil = ({ profilData, openOverlay }) => {
         <FaTimes size={24} />
       </CloseButton>
       <ProfilTitle>Profil</ProfilTitle>
-      <article>
+      <IntroText>
         <p id="profileDescription">{profilData.profileDescription}</p>
-      </article>
+      </IntroText>
 
       <OmMeg>
         <OmMegTitle>Om meg</OmMegTitle>
@@ -45,7 +45,6 @@ const CvProfil = ({ profilData, openOverlay }) => {
 
 export default CvProfil;
 
-// Styled Components
 const ProfilCard = styled(motion.div)`
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -56,9 +55,12 @@ const ProfilCard = styled(motion.div)`
 
 const CardHeader = styled.div`
   padding: 10px;
+  background-color: rgba(255, 215, 0, 0.8); // Match the yellow background
   cursor: pointer;
+
   h2 {
     font-size: 36px;
+    color: #1a1a1a; // Dark grey, similar to ErfaringsTitle
   }
 `;
 
@@ -66,7 +68,7 @@ const CardContent = styled.div`
   padding: 10px;
   max-width: 600px;
   margin: auto;
-  background-color: rgba(34, 139, 34, 0.8);
+  background-color: rgba(255, 215, 0, 0.8); // Match the yellow background
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
@@ -87,11 +89,10 @@ const CloseButton = styled.button`
   border: none;
   cursor: pointer;
   color: #fff;
-  font-size: 1.5rem;
 
   &:hover,
   &:focus {
-    color: #d3d3d3;
+    color: #d3d3d3; // Similar hover effect as in ErfaringsTitle
     outline: none;
   }
 
@@ -102,69 +103,67 @@ const CloseButton = styled.button`
   }
 `;
 
+const IntroText = styled.article`
+  p {
+    color: #4d4d4d;
+  }
+`;
+
 const ProfilTitle = styled.h3`
   font-size: 1.75rem;
-  color: #f5f5f5;
+  color: #1a1a1a; // Similar to ErfaringsTitle
   font-weight: bold;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #d8d8d8;
+  border-bottom: 2px solid #1a1a1a; // Solid line, similar to ErfaringsTitle
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
   @media (max-width: 768px) {
     font-size: 1.5rem;
   }
 `;
 
 const OmMeg = styled.article`
+  padding: 15px 0;
+  margin-bottom: 20px;
+
   p {
-    margin-bottom: 30px;
+    margin-top: 10px;
+    color: #4d4d4d; // Medium grey, similar to paragraph in Template
   }
 `;
+
 const OmMegTitle = styled.h4`
-  font-size: 1.5rem;
-  color: #f5f5f5;
+  font-size: 1.1em;
+  color: #000; // Black, similar to headers in Template
   font-weight: bold;
-  margin-bottom: 1rem;
-  padding: 0.5rem 0rem;
-  border-bottom: 2px solid #d8d8d8;
-  text-align: center;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  @media (max-width: 768px) {
-    font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+`;
+
+const Referanser = styled.article`
+  background-color: rgba(204, 162, 0, 0.8);
+
+  // Similar to CardContent background
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+
+  p {
+    color: #4d4d4d; // White, for contrast
+    line-height: 1.6;
+    margin-bottom: 15px;
   }
 `;
 
 const ReferanserTitle = styled.h4`
-  font-size: 1.5rem;
-  color: #e6e6e6; // Lighter shade for differentiation
+  font-size: 1.1em;
+  color: #1a1a1a; // White, similar to ProfilTitle
   font-weight: bold;
   margin-bottom: 1rem;
+  text-align: center;
   padding: 0.5rem 0;
-  border-bottom: 1px dashed #d8d8d8; // Dashed line for a subtle difference
-  text-align: center;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); // Slightly deeper shadow for emphasis
-  @media (max-width: 768px) {
-    font-size: 1.35rem;
-  }
-`;
-
-const Referanser = styled.article`
-  background-color: rgba(
-    47,
-    79,
-    79,
-    0.6
-  ); // Darker and more transparent background
-  padding: 15px;
-  margin-top: 20px;
-  border-radius: 8px; // Rounded corners for a distinct look
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); // Subtle shadow for depth
-
-  p {
-    color: #f5f5f5; // Light text for contrast
-    line-height: 1.6; // Improved readability
-    margin-bottom: 15px; // Spacing adjustment
-  }
-  text-align: center;
+  border-bottom: 2px solid #1a1a1a; // Solid line for separation
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 `;

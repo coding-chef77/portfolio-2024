@@ -102,7 +102,7 @@ const ContactForm = () => {
     <Box border={"1px solid gray"} borderRadius={4} padding={5} shadow="md">
       <VStack spacing={4} as="form" onSubmit={handleSubmit(onSubmit)}>
         <Image
-          src="/contact.jpg"
+          src="/contact.webp"
           h={24}
           alt="Contact Image"
           borderRadius="lg"

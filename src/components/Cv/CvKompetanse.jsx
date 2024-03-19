@@ -74,11 +74,22 @@ const ProfilCard = styled(motion.div)`
 
 const CardHeader = styled.div`
   padding: 10px;
-  background-color: 
+  background-color: rgba(255, 215, 0, 0.8);
   cursor: pointer;
 
   h2 {
     font-size: 36px;
+    color: #1a1a1a;
+  }
+`;
+
+const KompetanseSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+  @media (min-width: 375px) {
+    flex-direction: column;
   }
 `;
 
@@ -86,15 +97,15 @@ const CardContent = styled.div`
   padding: 10px;
   max-width: 600px;
   margin: auto;
-  background-color: rgba(34, 139, 34, 0.8);
+  background-color: rgba(255, 215, 0, 0.8);
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   max-height: 80vh;
 
-  @media (max-width: 768px) {
-    max-width: 90%;
-    padding: 5px;
+  @media (max-width: 375px) {
+    max-width: 95%; // Increase width for smaller screens
+    padding: 15px; // Slightly increase padding for better readability
   }
 `;
 
@@ -107,42 +118,31 @@ const CloseButton = styled.button`
   border: none;
   cursor: pointer;
   color: #fff;
-  font-size: 1.5rem;
 
   &:hover,
   &:focus {
-    color: #d3d3d3;
+    color: #ffd700;
     outline: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 375px) {
     top: 5px;
     right: 5px;
-    font-size: 1.25rem;
-  }
-`;
-
-const KompetanseSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-bottom: 20px;
-  @media (min-width: 768px) {
-    flex-direction: column;
+    font-size: 1.5rem; // Slightly increase for better touch interaction
   }
 `;
 
 const KompetanseTitle = styled.h4`
   font-size: 1.75rem;
-  color: #f5f5f5;
+  color: #000;
   font-weight: bold;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #d8d8d8;
+  border-bottom: 2px solid #000;
   text-align: center;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
+
+  @media (max-width: 375px) {
+    font-size: 1.65rem; // Adjust font size for consistency
   }
 `;
 
@@ -153,18 +153,15 @@ const KompetanseContainer = styled.div`
 `;
 
 const ListTitle = styled.h4`
-  flex-basis: 100px;
-  flex-basis: 100%;
-  flex-shrink: 0;
   font-size: 1.1rem;
-  color: #f5f5f5;
+  color: #000;
   font-weight: bold;
   margin-bottom: 0.5rem;
   text-align: left;
-  padding: 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 375px) {
     text-align: center;
+    font-size: 1.05rem; // Fine-tune font size for small screens
   }
 `;
 
@@ -172,14 +169,18 @@ const KompetanseList = styled.ul`
   padding-left: 0;
   line-height: 1.6;
   flex-grow: 1;
-  column-count: 1; // Default to one column
-  column-gap: 20px;
+
+  @media (min-width: 375px) {
+    column-count: 2; // Use two columns for larger screens
+    column-gap: 20px;
+  }
+
+  @media (max-width: 375px) {
+    column-count: 1; // Stick to one column for smaller screens
+  }
 
   li {
     list-style-type: none;
-  }
-
-  @media (min-width: 768px) {
-    column-count: 2; // Use two columns on larger screens
+    color: #333;
   }
 `;

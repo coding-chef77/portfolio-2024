@@ -21,7 +21,7 @@ const CvHeader = ({ headerData }) => {
         <motion.div
           whileHover={{
             scale: 1.05,
-            color: "#0055aa",
+            color: "#ffd700",
           }}
         >
           <FaEnvelope />
@@ -30,7 +30,7 @@ const CvHeader = ({ headerData }) => {
           </a>
         </motion.div>
 
-        <motion.div whileHover={{ scale: 1.05, color: "#0055aa" }}>
+        <motion.div whileHover={{ scale: 1.05, color: "#ffd700" }}>
           <FaLinkedin />
           <a
             href={headerData.address.linkedIn}
@@ -41,7 +41,7 @@ const CvHeader = ({ headerData }) => {
           </a>
         </motion.div>
 
-        <motion.div whileHover={{ scale: 1.05, color: "#0055aa" }}>
+        <motion.div whileHover={{ scale: 1.05, color: "#ffd700" }}>
           <FaPhoneAlt />
           <a href={`tel:${headerData.address.phone}`}>
             {headerData.address.phone}
@@ -70,7 +70,7 @@ const SectionHeader = styled.section`
   align-items: center;
   gap: 20px;
   text-align: left h1 {
-    font-family: "Merriweather", serif;
+    #ffd700font-family: "Merriweather", serif;
     font-size: 20px;
     font-weight: bold;
   }

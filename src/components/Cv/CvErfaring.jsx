@@ -55,11 +55,12 @@ const ProfilCard = styled(motion.div)`
 
 const CardHeader = styled.div`
   padding: 10px;
-  background-color: 
+  background-color: rgba(255, 215, 0, 0.8);
   cursor: pointer;
 
   h2 {
     font-size: 36px;
+    color: #1a1a1a;
   }
 `;
 

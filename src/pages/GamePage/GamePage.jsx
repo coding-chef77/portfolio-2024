@@ -118,9 +118,9 @@ const WinningMessage = styled.div`
     cursor: pointer;
 
     &:hover {
-      background-color: #4caf50;
-      color: white;
-      border-color: #4caf50;
+      background-color: #ffd700;
+
+      border-color: #ffd700;
     }
   }
 `;

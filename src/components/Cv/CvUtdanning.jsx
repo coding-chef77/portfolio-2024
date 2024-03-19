@@ -61,11 +61,12 @@ const ProfilCard = styled(motion.div)`
 
 const CardHeader = styled.div`
   padding: 10px;
-  background-color: 
+  background-color: rgba(255, 215, 0, 0.8);
   cursor: pointer;
 
   h2 {
     font-size: 36px;
+    color: #1a1a1a; // Match the color used in ErfaringsTitle
   }
 `;
 
@@ -73,53 +74,30 @@ const CardContent = styled.div`
   padding: 10px;
   max-width: 600px;
   margin: auto;
-  background-color: rgba(34, 139, 34, 0.8);
+  background-color: rgba(255, 215, 0, 0.8); // Match the background color
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  overflow-y: auto; // Enable vertical scrolling
-  max-height: 90vh; // Adjust the height as needed
+  overflow-y: auto;
+  max-height: 90vh;
 
   @media (max-width: 768px) {
-    max-width: 90%; // Smaller max-width on smaller screens
-    padding: 5px; // Less padding on smaller screens
+    max-width: 90%;
+    padding: 5px;
   }
 `;
 
 const UtdanningTitle = styled.h3`
   font-size: 1.75rem;
-  color: #f5f5f5;
+  color: #1a1a1a; // Match the color used in ErfaringsTitle
   font-weight: bold;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #d8d8d8;
+  border-bottom: 2px solid #1a1a1a; // Matching the title color
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
   @media (max-width: 768px) {
     font-size: 1.5rem;
-  }
-`;
-
-const CloseButton = styled.button`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 0.5rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-  font-size: 1.5rem;
-
-  &:hover,
-  &:focus {
-    color: #d3d3d3;
-    outline: none;
-  }
-
-  @media (max-width: 768px) {
-    top: 5px;
-    right: 5px;
-    font-size: 1.25rem;
   }
 `;
 
@@ -133,23 +111,45 @@ const TemplateUtdanning = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-  }
 
-  h3 {
-    margin-top: 25px;
-  }
+    h4 {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin: 0 0 2px 0;
+      color: #000; // Match the color used in Template
+    }
 
-  h4 {
-    font-weight: bold;
-    font-size: 1.1em;
-    margin: 0 0 2px 0;
+    time,
+    span {
+      color: #333; // Match the color used in Template
+    }
   }
 
   p {
     margin-top: 10px;
+    color: #4d4d4d; // Match the color used in Template
+  }
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    color: #d3d3d3;
+    outline: none;
   }
 
-  span {
-    color: #888;
+  @media (max-width: 768px) {
+    top: 5px;
+    right: 5px;
+    font-size: 1.25rem;
   }
 `;
