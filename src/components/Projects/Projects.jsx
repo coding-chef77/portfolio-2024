@@ -60,10 +60,10 @@ const StyledText = styled.p`
 const StyledButton = styled.a`
   display: inline-block;
   text-decoration: none;
-  padding: 8px 16px;
+  padding: 10px 20px;
   background-color: #ffd700;
   color: black;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
 
   &:hover {

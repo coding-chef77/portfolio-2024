@@ -32,10 +32,10 @@ const ContactPage = () => {
               textAlign="center"
               fontSize="2xl"
               fontWeight="bold"
-              color="blue.600"
+              color="#000"
               p={4}
               my={2}
-              bg="gray.100"
+              bg="#ffd700"
               borderRadius="md"
               shadow="sm"
             >

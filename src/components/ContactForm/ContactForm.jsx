@@ -25,10 +25,20 @@ const StyledFormLabel = styled(FormLabel)`
 
 const StyledInput = styled(Input)`
   margin-bottom: 8px; // Adjust as needed
+
+  &:focus {
+    border-color: #ffd700; // Yellow border color when focused
+    box-shadow: 0 0 0 1px #ffd700;
+  }
 `;
 
 const StyledTextarea = styled(Textarea)`
   margin-bottom: 8px; // Adjust as needed
+
+  &:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 0 1px #ffd700;
+  }
 `;
 
 const schema = yup.object().shape({
@@ -154,9 +164,14 @@ const ContactForm = () => {
           type="submit"
           isLoading={loading}
           w={"full"}
-          colorScheme="blue"
+          backgroundColor="#ffd700"
+          color="black"
           size={"sm"}
           fontSize={14}
+          _hover={{
+            bg: "#ccac00",
+          }}
+          isLoadingText="Sender..."
         >
           <HStack spacing={2}>
             <FaPaperPlane />

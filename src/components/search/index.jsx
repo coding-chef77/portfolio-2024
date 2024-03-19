@@ -25,7 +25,7 @@ const CitySearch = styled.input`
   flex-grow: 1;
   height: 40px;
   border: 2px solid #ddd;
-  border-radius: 20px;
+  border-radius: 4px;
   padding: 0 15px; // Reduced padding for smaller screens
   font-size: 16px;
   outline: none;
@@ -41,11 +41,11 @@ const CitySearch = styled.input`
 `;
 
 const SearchButton = styled.button`
-  padding: 8px 12px; // Slightly reduced padding
+  padding: 8px 16px; // Slightly reduced padding
   background-color: #ffd700;
   color: black;
   border: none;
-  border-radius: 20px;
+  border-radius: 4px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
