@@ -126,20 +126,17 @@ const WinningMessage = styled.div`
 `;
 
 const GlobalStyle = createGlobalStyle`
+:root {
+  --cell-size: 100px;  // Default cell size
+  --mark-size: calc(var(--cell-size) * 0.9);
+}
+
+@media (max-width: 450px) {
   :root {
-    --cell-size: 100px;
+    --cell-size: 60px; // Reduced cell size for smaller screens
     --mark-size: calc(var(--cell-size) * 0.9);
   }
-
-  *,
-  *::after,
-  *::before {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-  }
+}
 `;
 
 const GamePage = () => {
