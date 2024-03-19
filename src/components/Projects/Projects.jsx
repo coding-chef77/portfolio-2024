@@ -63,10 +63,11 @@ const Projects = () => {
       projectUrl: "https://stellar-sundae-2589e1.netlify.app/",
     },
     {
-      title: "Project 3",
-      description: "This is a brief description of Project 3.",
-      imageUrl: "/twinChat.png",
-      projectUrl: "#",
+      title: "Job Purpose Blog",
+      description:
+        "Dette er en blogg som jeg bygde til første års eksamen. Jeg fikk A på den",
+      imageUrl: "/job-purpose.png",
+      projectUrl: "https://animated-kheer-eee9dd.netlify.app/",
     },
   ];
 
