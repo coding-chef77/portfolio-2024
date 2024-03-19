@@ -9,6 +9,11 @@ const SearchContainer = styled.div`
   padding: 10px;
   max-width: 500px; // Limits the width for a more modern appearance
   margin: 20px auto; // Centrally aligns the search bar
+
+  @media (max-width: 600px) {
+    max-width: 100%; // Allows the search bar to fill the available width
+    padding: 10px 5px; // Reduces padding on smaller screens
+  }
 `;
 
 const CitySearch = styled.input`
