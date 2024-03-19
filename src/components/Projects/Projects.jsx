@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Grid = styled.div`
   display: grid;
@@ -20,7 +21,10 @@ const StyledBox = styled.div`
   width: 100%;
 `;
 
-const StyledImage = styled.img`
+const StyledImage = styled(motion.img)`
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 4px;
 `;
 
@@ -47,29 +51,19 @@ const StyledButton = styled.a`
   }
 `;
 
+const imageVariants = {
+  hover: {
+    scale: 1.05, // Slightly scale up the image
+    transition: {
+      duration: 0.2,
+      ease: "easeInOut",
+    },
+  },
+};
+
 const Projects = () => {
   const projects = [
-    {
-      title: "SoMe Prosjekt",
-      description:
-        "Dette prosjektet var min avsluttende eksamen der målet var å lage en sosial medieplattform. Siden jeg selv har tvillinger, tenkte jeg at det ville være en god idé å rette meg mot foreldre med tvillinger. Dette er mitt første prosjekt ved bruk av Material UI, og jeg likte fleksibiliteten. Vennligst klikk enten på GitHub-linken for fullstendige detaljer eller knappen nedenfor for å sjekke det ut i nettleseren din. Prosjektet er basert på API-dokumentasjonen levert av Noroff og inkluderer funksjoner som brukerregistrering, innlogging, profilhåndtering, oppretting av innlegg, oppretting av kommentarer og mer.",
-      imageUrl: "/twinChat.png",
-      projectUrl: "https://exam-2-twin-chat.vercel.app/",
-    },
-    {
-      title: "Square Eyes",
-      description:
-        "Square Eyes var et prosjekt utviklet for å praktisere bruk av API-kall og for å vise frem resultatene. Det inkluderte også en søkefunksjon.",
-      imageUrl: "/squareeues.png",
-      projectUrl: "https://stellar-sundae-2589e1.netlify.app/",
-    },
-    {
-      title: "Job Purpose Blog",
-      description:
-        "Dette prosjektet representerer en bloggplattform som jeg utviklet som en del av mitt førsteårs eksamensprosjekt. Evalueringen av prosjektet, utført av faglærere, resulterte i karakteren A",
-      imageUrl: "/job-purpose.png",
-      projectUrl: "https://animated-kheer-eee9dd.netlify.app/",
-    },
+    // Your projects array...
   ];
 
   return (
@@ -77,7 +71,12 @@ const Projects = () => {
       <Grid>
         {projects.map((project, index) => (
           <StyledBox key={index}>
-            <StyledImage src={project.imageUrl} alt={project.title} />
+            <StyledImage
+              src={project.imageUrl}
+              alt={project.title}
+              variants={imageVariants}
+              whileHover="hover"
+            />
             <StyledHeading>{project.title}</StyledHeading>
             <StyledText>{project.description}</StyledText>
             <StyledButton
