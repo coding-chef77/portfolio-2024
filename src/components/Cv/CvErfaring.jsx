@@ -29,10 +29,9 @@ const CvErfaring = ({ erfaringData, openOverlay }) => {
     <ProfilCard
       whileHover={{
         scale: 1.01,
-        backgroundColor: "#f0f0f0",
+        backgroundColor: "#ffd700",
         color: "#000",
-        border: "2px solid #0055aa",
-        boxShadow: "0px 0px 10px 2px rgba(0, 85, 170, 0.5)",
+        border: "2px solid #ffd700",
       }}
       onClick={() => openOverlay(renderOverlayContent())}
     >
@@ -46,7 +45,7 @@ const CvErfaring = ({ erfaringData, openOverlay }) => {
 export default CvErfaring;
 
 const ProfilCard = styled(motion.div)`
-  border: 1px solid #ccc;
+  border: 1px solid #ffd700;
   border-radius: 5px;
   overflow: hidden;
   max-width: 500px;
@@ -55,7 +54,7 @@ const ProfilCard = styled(motion.div)`
 
 const CardHeader = styled.div`
   padding: 10px;
-  background-color: rgba(255, 215, 0, 0.8);
+  background-color: rgba(255, 215, 0, 0.9);
   cursor: pointer;
 
   h2 {

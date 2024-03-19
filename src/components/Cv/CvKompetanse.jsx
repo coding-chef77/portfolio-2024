@@ -49,9 +49,9 @@ const CvKompetanse = ({ kompetanseData, openOverlay }) => {
     <ProfilCard
       whileHover={{
         scale: 1.01,
-        backgroundColor: "#f0f0f0",
+        backgroundColor: "#ffd700",
         color: "#000",
-        boxShadow: "0px 0px 10px 2px rgba(0, 85, 170, 0.5)",
+        border: "2px solid #ffd700",
       }}
       onClick={() => openOverlay(renderOverlayContent())}
     >
@@ -65,7 +65,7 @@ const CvKompetanse = ({ kompetanseData, openOverlay }) => {
 export default CvKompetanse;
 
 const ProfilCard = styled(motion.div)`
-  border: 1px solid #ccc;
+  border: 1px solid #ffd700;
   border-radius: 5px;
   overflow: hidden;
   max-width: 500px;
@@ -74,7 +74,7 @@ const ProfilCard = styled(motion.div)`
 
 const CardHeader = styled.div`
   padding: 10px;
-  background-color: rgba(255, 215, 0, 0.8);
+  background-color: rgba(255, 215, 0, 0.9);
   cursor: pointer;
 
   h2 {
@@ -97,7 +97,7 @@ const CardContent = styled.div`
   padding: 10px;
   max-width: 600px;
   margin: auto;
-  background-color: rgba(255, 215, 0, 0.8);
+  background-color: rgba(255, 215, 0, 0.9);
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow-y: auto;

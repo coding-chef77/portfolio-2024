@@ -35,10 +35,9 @@ const CvUtdanning = ({ utdanningData, openOverlay }) => {
     <ProfilCard
       whileHover={{
         scale: 1.01,
-        backgroundColor: "#f0f0f0",
+        backgroundColor: "#ffd700",
         color: "#000",
-        border: "2px solid #0055aa",
-        boxShadow: "0px 0px 10px 2px rgba(0, 85, 170, 0.5)",
+        border: "2px solid #ffd700",
       }}
       onClick={() => openOverlay(renderOverlayContent())}
     >
@@ -52,7 +51,7 @@ const CvUtdanning = ({ utdanningData, openOverlay }) => {
 export default CvUtdanning;
 
 const ProfilCard = styled(motion.div)`
-  border: 1px solid #ccc;
+  border: 1px solid #ffd700;
   border-radius: 5px;
   overflow: hidden;
   max-width: 500px;
@@ -61,7 +60,7 @@ const ProfilCard = styled(motion.div)`
 
 const CardHeader = styled.div`
   padding: 10px;
-  background-color: rgba(255, 215, 0, 0.8);
+  background-color: rgba(255, 215, 0, 0.9);
   cursor: pointer;
 
   h2 {
@@ -74,7 +73,7 @@ const CardContent = styled.div`
   padding: 10px;
   max-width: 600px;
   margin: auto;
-  background-color: rgba(255, 215, 0, 0.8); // Match the background color
+  background-color: rgba(255, 215, 0, 0.9); // Match the background color
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
