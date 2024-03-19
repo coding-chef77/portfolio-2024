@@ -58,14 +58,15 @@ const Projects = () => {
     },
     {
       title: "Square Eyes",
-      description: "This is a brief description of Project 2.",
+      description:
+        "Square Eyes var et prosjekt utviklet for å praktisere bruk av API-kall og for å vise frem resultatene. Det inkluderte også en søkefunksjon.",
       imageUrl: "/squareeues.png",
       projectUrl: "https://stellar-sundae-2589e1.netlify.app/",
     },
     {
       title: "Job Purpose Blog",
       description:
-        "Dette er en blogg som jeg bygde til første års eksamen. Jeg fikk A på den",
+        "Dette prosjektet representerer en bloggplattform som jeg utviklet som en del av mitt førsteårs eksamensprosjekt. Evalueringen av prosjektet, utført av faglærere, resulterte i karakteren A",
       imageUrl: "/job-purpose.png",
       projectUrl: "https://animated-kheer-eee9dd.netlify.app/",
     },
