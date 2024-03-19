@@ -2,9 +2,16 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const Grid = styled.div`
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  align-items: flex-start; // Align items to the start of the flex container
+
+  & > div {
+    flex: 1;
+    min-width: 250px; // Minimum width of each card
+    max-width: 1fr; // Allows the card to expand to fill the available space
+  }
 `;
 
 const StyledContainer = styled.div`
@@ -17,28 +24,28 @@ const StyledContainer = styled.div`
   width: 100%;
 `;
 
-const StyledBox = styled(motion.div)`
-  width: 100%;
-  background-color: transparent; // Default background
-  border-radius: 4px; // Match the border-radius of the image if needed
-  overflow: hidden; // Ensure that the contents stay within the rounded corners
-  transition: box-shadow 0.3s ease, background-color 0.3s ease; // Smooth transition for shadow and background color
-
-  &:hover {
-    background-color: #1a1a1a; // Dark background for hover, complementing the black page background
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25); // Subtle shadow for depth
-  }
+const StyledBox = styled.div`
+  background-color: #1a1a1a;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 `;
 
-const ContentContainer = styled.div`
-  padding: 0 8px 8px 8px;
-`;
-
-const StyledImage = styled.img`
+const StyledImage = styled(motion.img)`
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 4px;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03); // Image scales up on hover
+  }
+`;
+
+const ContentContainer = styled.div`
+  padding: 0px 8px 12px 8px;
 `;
 
 const StyledHeading = styled.h2`
@@ -63,18 +70,6 @@ const StyledButton = styled.a`
     background-color: #ccac00;
   }
 `;
-
-const cardVariants = {
-  hover: {
-    // You might adjust background color, box-shadow etc. instead of scale
-    backgroundColor: "#1a1a1a",
-    boxShadow: "0px 8px 30px rgba(0, 0, 0, 0.2)",
-    transition: {
-      backgroundColor: { duration: 0.2, ease: "easeInOut" },
-      boxShadow: { duration: 0.2, ease: "easeInOut" },
-    },
-  },
-};
 
 const Projects = () => {
   const projects = [
@@ -105,13 +100,13 @@ const Projects = () => {
     <StyledContainer>
       <Grid>
         {projects.map((project, index) => (
-          <StyledBox
-            key={index}
-            variants={cardVariants}
-            whileHover="hover"
-            initial={{ backgroundColor: "transparent" }}
-          >
-            <StyledImage src={project.imageUrl} alt={project.title} />
+          <StyledBox key={index}>
+            <StyledImage
+              src={project.imageUrl}
+              alt={project.title}
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+            />
             <ContentContainer>
               <StyledHeading>{project.title}</StyledHeading>
               <StyledText>{project.description}</StyledText>

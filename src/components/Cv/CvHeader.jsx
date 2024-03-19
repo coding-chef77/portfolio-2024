@@ -91,16 +91,18 @@ const SectionHeader = styled.section`
 `;
 
 const Image = styled.img`
-  border-radius: 50%;
+  border-radius: 8%; // Makes the image round
   width: 100px;
   height: 100px;
+  object-fit: cover; // Ensures the image covers the area, maintaining aspect ratio
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Optional: Adds subtle shadow for depth
 
   @media (min-width: 960px) {
-    width: 135px;
+    width: 135px; // Larger size for wider screens
     height: 135px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Optional: Slightly larger shadow for larger image
   }
 `;
-
 const Address = styled(motion.address)`
   flex: 1;
   align-self: center;
