@@ -12,44 +12,58 @@ const SearchContainer = styled.div`
 
   @media (max-width: 600px) {
     max-width: 100%; // Allows the search bar to fill the available width
-    padding: 10px 5px; // Reduces padding on smaller screens
+    padding: 10px 5px; // Slightly reduces padding
+  }
+
+  @media (max-width: 460px) {
+    flex-direction: column; // Stacks the input field and search button vertically
+    gap: 5px;
   }
 `;
 
 const CitySearch = styled.input`
   flex-grow: 1;
   height: 40px;
-  border: 2px solid #ddd; // Subtle border
-  border-radius: 20px; // Rounded corners for a modern look
-  padding: 0 20px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  padding: 0 15px; // Reduced padding for smaller screens
   font-size: 16px;
   outline: none;
-  transition: border-color 0.3s; // Smooth transition for focus
 
   &:focus {
-    border-color: #aaa; // Changes border color on focus
+    border-color: #aaa;
+  }
+
+  @media (max-width: 460px) {
+    width: 100%; // Full width to maximize space
+    padding: 0 10px; // Further reduce padding on very small screens
   }
 `;
 
 const SearchButton = styled.button`
-  padding: 8px 16px;
-  background-color: #ffd700; // A modern blue shade
+  padding: 8px 12px; // Slightly reduced padding
+  background-color: #ffd700;
   color: black;
   border: none;
-  border-radius: 20px; // Rounded corners to match the input field
+  border-radius: 20px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  transition: background-color 0.3s; // Smooth background color transition
 
   &:hover {
-    background-color: #ccac00; // Slightly darker shade on hover
+    background-color: #ccac00;
   }
 
   svg {
     width: 20px;
     height: 20px;
+  }
+
+  @media (max-width: 460px) {
+    margin-top: 16px;
+    padding: 8px; // Further reduce padding for the button
+    width: 40%; // Allow the button to fill the available width
   }
 `;
 
