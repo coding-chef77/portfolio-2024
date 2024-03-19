@@ -15,7 +15,7 @@ const CvErfaring = ({ erfaringData, openOverlay }) => {
             <h4>{job.title}</h4>
             <div>
               <time dateTime={job.startDate}>{job.startDate}</time>
-              <span className="date-separator">-</span>
+              <span>-</span>
               <time dateTime={job.endDate}>{job.endDate}</time>
             </div>
           </header>
@@ -67,7 +67,7 @@ const CardContent = styled.div`
   padding: 10px;
   max-width: 600px;
   margin: auto;
-  background-color: rgba(34, 139, 34, 0.8);
+  background-color: rgba(255, 215, 0, 0.8);
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow-y: auto; // Enable vertical scrolling
@@ -105,16 +105,13 @@ const CloseButton = styled.button`
 
 const ErfaringsTitle = styled.h3`
   font-size: 1.75rem;
-  color: #f5f5f5;
+  color: #1a1a1a; // Slightly lighter than pure black for the title
   font-weight: bold;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #d8d8d8; // A subtle underline
+  border-bottom: 2px solid #1a1a1a; // Matching the title color
   text-align: center;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); // Optional text shadow for depth
-  @media (max-width: 768px) {
-    font-size: 1.5rem; // Smaller font size for smaller screens
-  }
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 `;
 
 const Template = styled.article`
@@ -122,32 +119,22 @@ const Template = styled.article`
   border-radius: 5px;
   margin-bottom: 20px;
 
-  &:first-of-type {
-    padding: 0;
-  }
-
   header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
+    h4 {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin: 0 0 2px 0;
+      color: #000; // Keep important headers in pure black
+    }
 
-  h3 {
-    margin-top: 30px;
-  }
-
-  h4 {
-    font-weight: bold;
-    font-size: 1.1em;
-    margin: 0 0 2px 0;
+    time,
+    span {
+      color: #333; // Dark grey for less emphasis
+    }
   }
 
   p {
     margin-top: 10px;
-  }
-
-  span {
-    color: #888;
+    color: #4d4d4d; // Medium grey for body text, easier on the eyes
   }
 `;
