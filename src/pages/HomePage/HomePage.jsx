@@ -58,19 +58,19 @@ const HeroContainerWrapper = styled.div`
 
 const Heading = styled.h1`
   text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2);
-  font-size: 52px; // Original font size for larger screens
+  font-size: 52px;
   margin-bottom: 32px;
   line-height: 1.05;
 
   @media (max-width: 768px) {
-    font-size: 32px; // Reduced font size for smaller screens
+    font-size: 32px;
   }
 
   @media (max-width: 375px) {
     // Specifically targeting iPhone X screen size
-    font-size: 28px; // Even smaller font size for very small screens like iPhone X
-    line-height: 1.1; // Adjusting line height to prevent clipping
-    margin-bottom: 24px; // Reducing bottom margin
+    font-size: 28px;
+    line-height: 1.1;
+    margin-bottom: 24px;
   }
 `;
 

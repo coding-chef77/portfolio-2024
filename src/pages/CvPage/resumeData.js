@@ -1,6 +1,6 @@
 export const cvData = {
   header: {
-    image: "avatar.jpeg",
+    image: "avatar.png",
     altText: "Portrait of Heine Günther",
     name: "Heine Günther",
     title: "fra kokk til koder",
