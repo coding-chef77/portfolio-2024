@@ -77,6 +77,16 @@ export const cvData = {
   },
   erfaring: [
     {
+      title: "Blindern omsorgssenter, Kokk/miljøarbeider",
+      startDate: "11.24",
+      endDate: "Nåværende",
+      description: `Som kokk har jeg ansvar for planlegging og tilberedning av ernæringsriktige måltider i henhold til IK-mat og beboernes behov. Jeg utvikler menyer med fokus på bærekraftig bruk av ressurser, sesongbaserte råvarer og redusering av matsvinn. I tillegg håndterer jeg innkjøp og riktig behandling av råvarer, i tråd med Oslo kommunes retningslinjer.
+      
+      Jeg bidrar til institusjonens faglige utvikling ved å sørge for korrekt dokumentasjon, oppfølging av rutiner, samt håndtering av avvik etter gjeldende lovverk. Mattilberedningen tilpasses ulike anledninger og målgrupper, inkludert spesialmåltider for høytider og bursdager.
+
+      Videre har jeg ansvar for matbudsjettet og oppfølging av kjøkkenutstyr, samt daglig rengjøring og vedlikehold av kjøkkenområdet. Jeg veileder kolleger i kjøkkenrutiner og utarbeider ernæringsplaner i samarbeid med beboere og helsepersonell for å sikre at alle behov blir ivaretatt.`,
+    },
+    {
       title: "Bjølsenhjemmet, Kokk (Logistikk)",
       startDate: "09.11",
       endDate: "12.20",
